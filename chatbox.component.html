@@ -1,0 +1,14 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+
+
+
+<div id="messages">
+    <div class="alert alert-primary" role="alert" *ngFor="let msg of msgArr;">
+    {{msg.msg}} - {{msg.time}}
+    </div>
+</div>
+    <form action="" #form = "ngForm" > 
+    <input id="m" autocomplete="off" ngModel name="msg" />
+    <button (click)="send(form)">Send</button>
+    </form>
